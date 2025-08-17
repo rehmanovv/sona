@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galaxy with Zoom Effect</title>
+  <title>Zoom Effektli Ulduzlar</title>
   <link rel="stylesheet" href="style.css" />
   <script type="importmap">
     {
@@ -45,7 +45,7 @@
   <div id="landscape-warning">
     <div class="warning-content">
       <div class="rotate-icon"></div>
-      <h1>Stellar Bloom</h1>
+      <h1>Ulduzlar Çiçəyi</h1>
       <h1>Tinh Cầu</h1>
       <div class="stars-bg"></div>
     </div>
@@ -53,34 +53,34 @@
 
   <div id="dark-overlay"></div>
   <div id="info"></div>
-<h1 style="position: fixed; bottom: 10px; right: 10px; font-size: 18px; font-family: Arial, sans-serif; color: white; background: rgba(0, 0, 0, 0.4); padding: 6px 12px; border-radius: 8px; z-index: 9999;">
-  Create by Miko
-</h1>
-  <button id="musicButton" disabled>Mainkan Musik 🎵</button>
+  <h1 style="position: fixed; bottom: 10px; right: 10px; font-size: 18px; font-family: Arial, sans-serif; color: white; background: rgba(0, 0, 0, 0.4); padding: 6px 12px; border-radius: 8px; z-index: 9999;">
+    Miko tərəfindən yaradılıb
+  </h1>
+  <button id="musicButton" disabled>Mahını dinlə 🎵</button>
   <div id="player"></div>
   <script src="https://www.youtube.com/iframe_api"></script>
   <script>
     let player;
-     const startTime = 227;
-    const endTime = 261;
+    const startTime = 0;
+    const endTime = 180;
     window.onYouTubeIframeAPIReady = function() {
       player = new YT.Player('player', {
         height: '0',
         width: '0',
-        videoId: 'd4OMqGKBl6E',
+        videoId: 'Bgm2naUtoJo',
         playerVars: {
           autoplay: 0,
           start: startTime,
           end: endTime,
           controls: 0,
           loop: 1,
-          playlist: 'd4OMqGKBl6E'
+          playlist: 'Bgm2naUtoJo'
         },
         events: {
           onReady: () => {
             const btn = document.getElementById('musicButton');
             btn.disabled = false;
-            btn.innerText = "Mainkan Musik 🎵";
+            btn.innerText = "Mahını dinlə 🎵";
           },
           onStateChange: (event) => {
             if (event.data === YT.PlayerState.ENDED) {
