@@ -584,10 +584,10 @@ const planet = new THREE.Mesh(planetGeometry, planetMaterial);
 planet.position.set(0, 0, 0);
 scene.add(planet);
 const ringTexts = [
-  "08.10.2025",
-  "Sona seni çox sevirem🤍",
-  "Yaxsiki varsan",
-  "Herşeyimsen🤍",
+  "08.10.2025",             // layer 1
+  "Sona seni çox sevirem🤍", // layer 2
+  "Yaxşıki varsan",         // layer 3
+  "Herşeyimsen🤍",           // layer 4
   ...(window.dataCCD && window.dataCCD.data.ringTexts ? window.dataCCD.data.ringTexts : [])
 ];
 
