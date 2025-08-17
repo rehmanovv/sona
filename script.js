@@ -1,7 +1,7 @@
-import * as THREE from './three/build/three.module.js';
-import { OrbitControls } from './three/examples/jsm/controls/OrbitControls.js';
-import { FontLoader } from './three/examples/jsm/loaders/FontLoader.js';
-import { TextGeometry } from './three/examples/jsm/geometries/TextGeometry.js';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
 
 const scene = new THREE.Scene();
 scene.fog = new THREE.FogExp2(0x000000, 0.0015);
@@ -583,11 +583,14 @@ const planetMaterial = new THREE.ShaderMaterial({
 const planet = new THREE.Mesh(planetGeometry, planetMaterial);
 planet.position.set(0, 0, 0);
 scene.add(planet);
+
+
+//Ganti Deskripsi Planet
 const ringTexts = [
-  "08.10.2025",             // layer 1
-  "Sona seni çox sevirem🤍", // layer 2
-  "Yaxşıki varsan",         // layer 3
-  "Herşeyimsen🤍",           // layer 4
+  'Galaxy of love From ...',//untuk deskripsi planet layer 1
+  "I love you",//untuk deskripsi planet layer 2
+  "♡Happy Girlfriend day♡",//untuk deskripsi planet layer 3
+  "01/08/2025",//untuk deskripsi planet layer 4
   ...(window.dataCCD && window.dataCCD.data.ringTexts ? window.dataCCD.data.ringTexts : [])
 ];
 
